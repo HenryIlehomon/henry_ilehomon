@@ -1,4 +1,3 @@
-# henry_ilehomon
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -68,14 +67,14 @@ public class HENRY_ILEHOMONGPACal {
         int totalQualityPoints = 0;
         int totalGradeUnits = 0;
 
-        for (int b = 0; b < course_number; b++) {
-            String grade = getGrade(scores[b]);
-            int gradePoint = getGradePoint(scores[b]);            //grade point iteration
+        for (int i = 0; i < course_number; i++) {
+            String grade = getGrade(scores[i]);
+            int gradePoint = getGradePoint(scores[i]);
 
-            totalQualityPoints += gradePoint * courseUnit[b];
-            totalGradeUnits += courseUnit[b];
+            totalQualityPoints += gradePoint * courseUnit[i];
+            totalGradeUnits += courseUnit[i];
 
-            System.out.printf(" %-15s| %-11d| %-5s| %-8d %n", courseNames[b], courseUnit[b], grade, gradePoint);
+            System.out.printf(" %-15s| %-11d| %-5s| %-8d %n", courseNames[i], courseUnit[i], grade, gradePoint);
         }
 
         double gpa = (double) totalQualityPoints / totalGradeUnits;
